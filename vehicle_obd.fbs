@@ -1,0 +1,35 @@
+namespace OBD;
+
+table OBD2_data{
+	vin: string;
+	engine_load: uint32;
+	engine_coolant_temperature: uint32;
+	fuel_pressure: uint32;
+	engine_speed : uint32;
+	vehicle_speed: uint32;
+	intake_air_temperature: uint32;
+	mass_air_flow: uint32;
+	fuel_tank_level_input: uint32;
+	absolute_barometric_pressure: uint32;
+	control_module_voltage: uint32;
+	throttle_position:uint32;
+	ambient_air_temperature: uint32;
+	relative_accelerator_pedal_position: uint32;
+	engine_oil_temperature: uint32;
+	engine_fuel_rate: uint32;
+	service_distance: uint32;
+	anti_lock_barking_active: uint32;
+	steering_wheel_angle: uint32;
+	position_of_doors: uint32;
+	right_left_turn_signal_light: uint32;
+	alternate_beam_head_light: uint32;
+	high_beam_head_light: uint32;
+}
+
+table OBD2Meta{
+    deviceID: string;
+    timestamp: int64;
+    data: OBD2_data;
+}
+
+root_type OBD2Meta;

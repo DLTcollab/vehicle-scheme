@@ -1,0 +1,9 @@
+namespace endpoint;
+
+table Msg{
+    hmac: [ubyte];
+    iv: [ubyte];
+    data: [ubyte];
+}
+
+root_type Msg;
